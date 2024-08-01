@@ -9,10 +9,12 @@ int main(){
             cout<<"  ";
         }
         for(int j=1;j<=i;j++){
-            cout<<j<<" ";
+            char ch = 'A' + (j-1);
+            cout<<ch<<" ";
         }
         for(int j=i-1;j>=1;j--){
-            cout<<j<<" ";
+            char ch = 'A' + (j-1);
+            cout<<ch<<" ";
         }
         cout<<endl;
     }
