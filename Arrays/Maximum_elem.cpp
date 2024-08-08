@@ -12,12 +12,13 @@ int main(){
         cin>>arr[i];
     }
 
-    int max = arr[0];
+    int max = INT_MIN;
     for(int i=1;i<=n;i++){
        if(arr[i]>max) {
            max=arr[i];
        }
     }
     cout<<"Maximum element = "<<max;
+    
 
 }
