@@ -6,18 +6,18 @@ int main(){
     cout<<"size of array : ";
     cin>>n;
 
-    int arr[n];
+    int arr[100];
     cout<<"Enter the elements of array :- ";
     for(int i=1;i<=n;i++){
         cin>>arr[i];
     }
 
-    int min = arr[0];
+    int max = arr[0];
     for(int i=1;i<=n;i++){
-       if(arr[i]>min) {
-           min=arr[i];
+       if(arr[i]>max) {
+           max=arr[i];
        }
     }
-    cout<<"Minimum element = "<<min;
+    cout<<"Maximum element = "<<max;
 
 }
