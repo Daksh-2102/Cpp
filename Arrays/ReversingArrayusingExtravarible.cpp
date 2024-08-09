@@ -1,18 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// int Reversing_using_Extra_array(int n,int arr[]) {
-//     int temp[n];
-//     int i = n-1;
-//     int j = 0;
+void display(int n,int arr[]){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    } cout<<endl;
+}
 
-//     while(i>=0){
-//         temp[j]=arr[i];
-//         j++;
-//         i--;
-//     }
-//     return temp[j];
-// }
+void Reversed_Array(int n,int arr[]){
+    for(int i=n-1;i>=0;i--){
+        cout<<arr[i]<<" ";
+    }
+}
 
 int main(){
     int n;
@@ -25,10 +24,12 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
+    
+    cout<<"Array Before Reversing :";
+    display(n,arr);
 
-    //Reversing_using_Extra_array(n,arr);
+    cout<<"Reversed  Array : - ";
+    Reversed_Array(n,arr);
 
-    for(int i=n-1;i>=0;i--){
-        cout<<arr[i]<<" ";
-    }
+    
 }
