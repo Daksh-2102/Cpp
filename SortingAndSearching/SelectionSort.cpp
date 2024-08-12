@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 void display(int n,int arr[]){
@@ -8,16 +8,15 @@ void display(int n,int arr[]){
 }
 
 void Selection_Sort(int n,int arr[]){
-    // Selction Sort code part
     for(int i=0;i<n-1;i++){
-        int index = i;
+        int index=i;
         for(int j=i+1;j<n;j++){
             if(arr[j]<arr[index])
             {
-                index = j;
+                index=j;
             }
         }
-        swap(arr[index],arr[i]);
+        swap(arr[i],arr[index]);
     }
 }
 
@@ -26,8 +25,8 @@ int main(){
     cout<<"Enter the size of an array : ";
     cin>>n;
 
-    cout<<"Enter the elements of an array : ";
-    int arr[n];
+    int arr[1000];
+    cout<<"Enter the elements of the array : ";
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
@@ -38,5 +37,4 @@ int main(){
     Selection_Sort(n,arr);
     cout<<"Array After Sorting : ";
     display(n,arr);
-
 }
