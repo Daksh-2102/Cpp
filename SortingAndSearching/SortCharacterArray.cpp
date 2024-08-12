@@ -1,11 +1,23 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-// void display(int n,char arr[]){
-//     for(char i='a';i<='z';i++){
-//         cout<<arr[i]<<" ";
-//     } cout<<endl;
-// }
+void display(int n,char arr[]){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    } cout<<endl;
+}
+
+void Selection_Sort(int n,char arr[]){
+    for(int i=0;i<n-1;i++){
+        int index = i;
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<arr[index]){
+                index=j;
+            }
+        }
+        swap(arr[i],arr[index]);
+    }
+}
 
 int main(){
     int n;
@@ -13,15 +25,16 @@ int main(){
     cin>>n;
 
     cout<<"Enter the elements of an array : ";
-    char arr[n];
-    for(char i=65;i<=90;i++){
+    char arr[1000];
+    for(int i=0;i<n;i++){
         cin>>arr[i];
     }
 
-    cout<<" Character Array Before Sorting : ";
+    cout<<"Array Before Sorting : ";
+    display(n,arr);
 
-    for(char i=65;i<=126;i++){
-        cout<<arr[i]<<" ";
-    } cout<<endl;
-    // display(n,arr);
+    Selection_Sort(n,arr);
+    cout<<"Array After Sorting : ";
+    display(n,arr);
+
 }
