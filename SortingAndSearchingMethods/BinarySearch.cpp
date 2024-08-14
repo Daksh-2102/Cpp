@@ -7,7 +7,7 @@ void display(int n ,int arr[]){
     } cout<<endl;
 }
 
-void Bubble_Sorting(int n,int arr[]){
+void Bubble_Sorting(int n,int arr[]){ // time complexity = 0(log n);
     // Bubble Sort 
     for(int i=0;i<n;i++){
         for(int j=0;j<n-i-1;j++){
@@ -23,7 +23,7 @@ int Binary_Search(int arr[],int n,int k){
     int high = n-1;
 
     while(low<=high){
-        int mid = (low+high)/2;
+        int mid = low +(high-low)/2;
 
         if(arr[mid]==k) return mid;
         if(arr[mid]<k)  low = mid+1;
